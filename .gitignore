@@ -1,0 +1,17 @@
+# Local agent logs
+.learnings/
+
+# macOS
+.DS_Store
+
+# Editor and temporary files
+*.swp
+*.swo
+*.tmp
+*~
+
+# Secrets
+.env
+.env.*
+!.env.example
+
