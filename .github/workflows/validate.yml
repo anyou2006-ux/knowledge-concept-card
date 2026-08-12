@@ -1,0 +1,1 @@
+name: Validate Skill\n\non:\n  push:\n  pull_request:\n  workflow_dispatch:\n\npermissions:\n  contents: read\n\njobs:\n  validate:\n    runs-on: ubuntu-latest\n    steps:\n      - name: Check out repository\n        uses: actions/checkout@v4\n      - name: Validate Skill structure\n        run: sh ./scripts/validate-skill.sh\n
