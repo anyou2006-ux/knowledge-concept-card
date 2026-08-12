@@ -1,0 +1,1 @@
+## What changed\n\n## Why it improves learning accuracy or usability\n\n## Validation\n\n- [ ] `sh ./scripts/validate-skill.sh`\n- [ ] A realistic input was manually reviewed\n- [ ] No unlicensed third-party material was added\n
