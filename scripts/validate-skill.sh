@@ -39,7 +39,7 @@ for subject in english-vocabulary c-language high-school-chinese high-school-mat
 done
 
 [ "$(sed -n "1p" "$skill_file")" = "---" ] || fail "SKILL.md must begin with YAML frontmatter"
-frontmatter_end=$(awk "NR > 1 && \$0 == "---" { print NR; exit }" "$skill_file")
+frontmatter_end=$(grep -n "^---$" "$skill_file" | sed -n "2s/:.*//p")
 [ -n "$frontmatter_end" ] || fail "SKILL.md frontmatter is not closed"
 frontmatter=$(sed -n "1,${frontmatter_end}p" "$skill_file")
 skill_name=$(printf "%s\n" "$frontmatter" | sed -n "s/^name: //p" | head -n 1)
