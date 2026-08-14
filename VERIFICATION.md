@@ -84,7 +84,27 @@ Release 中安全声明（Dependabot 三项、Secret scanning、CodeQL、
 走确定性排版；不硬凑反义词；未定义行为如实标注。HTML 产物解析零错误、
 无未闭合标签。测试产物位于 `/tmp`，已清理，未污染仓库。
 
-## 6. 总体结论
+## 6. 操作手册发布验证 — 通过
+
+为四个验收样例各发布一份操作手册（适用场景、输入方式、操作步骤、验收点、
+常见问题），并在 README 增加入口链接：
+
+| 文件 | 样例 | 远端提交 |
+| --- | --- | --- |
+| `examples/how-to-english-vocabulary.md` | resilience | `6c599a4` |
+| `examples/how-to-c-language.md` | pointer dereference | `bad21f4` |
+| `examples/how-to-high-school-chinese.md` | 借景抒情 | `ffb2dff` |
+| `examples/how-to-high-school-math.md` | 二次函数图像平移 | `82e71de` |
+| `README.md`（新增“操作手册”章节） | — | `420fd74` |
+
+验证结论：
+
+- 格式：5 个文件均为真实换行，无字面量 `\n` 问题；README 95 行。
+- CI：`Validate Skill` × 4 与 `CodeQL Push on main` × 3 全部 Success。
+- 本地与远端同步于 `420fd74`，工作区干净，结构验证通过。
+- 手册引用的验收样例（input-output.md #1–#4）均已随 v1.0.0 发布，链接有效。
+
+## 7. 总体结论
 
 **通过（PASS）。** knowledge-concept-card v1.0.0 满足发布标准：
 
