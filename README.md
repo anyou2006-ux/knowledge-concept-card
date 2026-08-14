@@ -65,6 +65,15 @@ format: card-and-html
 | `focus` | 否 | 考试、应用场景或难点 |
 | `format` | 否 | `content-spec`、`card`、`card-and-html`；默认 `card` |
 
+### 操作手册
+
+每个学科配置一份操作手册（含输入、步骤、验收点与常见问题）：
+
+- [英语词汇（样例 resilience）](examples/how-to-english-vocabulary.md)
+- [C 语言（样例 pointer dereference）](examples/how-to-c-language.md)
+- [高中语文（样例 借景抒情）](examples/how-to-high-school-chinese.md)
+- [高中数学（样例 二次函数图像平移）](examples/how-to-high-school-math.md)
+
 ## 测试
 
 运行零依赖结构测试：
